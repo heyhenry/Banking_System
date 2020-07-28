@@ -32,18 +32,9 @@ public class BankSystem {
 
     }
 
-    // TODO at a later date
-    public String toString() {
-
-        return "$" + balance;
-
-    }
-
-    public static void main(String[] args) {
+    public void menu(BankSystem person) {
 
         Scanner sc = new Scanner(System.in);
-
-        BankSystem bob = new BankSystem("D123", "Bob B.", 500);
 
         char choice;
         double amount;
@@ -67,7 +58,7 @@ public class BankSystem {
                 case 'A' :
 
                     System.out.println("Checking Balance...");
-                    System.out.println("Balance: $" + bob.checkBalance());
+                    System.out.println("Balance: $" + person.checkBalance());
                     break;
 
                 case 'B' :
@@ -75,7 +66,7 @@ public class BankSystem {
                     System.out.println("Enter deposit amount: ");
                     amount = Double.parseDouble(sc.nextLine());
                     System.out.println("Depositing...");
-                    bob.deposit(amount);
+                    person.deposit(amount);
                     System.out.println("Deposited!");
 
                     break;
@@ -85,7 +76,7 @@ public class BankSystem {
                     System.out.println("Enter withdraw amount: ");
                     amount = Double.parseDouble(sc.nextLine());
                     System.out.println("Withdrawing...");
-                    bob.withdraw(amount);
+                    person.withdraw(amount);
                     System.out.println("Withdrawn!");
 
                     break;
@@ -107,6 +98,14 @@ public class BankSystem {
             }
 
         } while (Character.toUpperCase(choice) != 'X');
+
+
+    }
+
+    // TODO at a later date
+    public String toString() {
+
+        return "$" + balance;
 
     }
 
