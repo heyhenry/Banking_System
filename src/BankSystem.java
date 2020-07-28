@@ -1,26 +1,40 @@
+import java.util.Scanner;
+
 public class BankSystem {
 
-    public BankSystem() {
+    private double balance;
+    private String id;
+    private String name;
+
+    public BankSystem(String id, String name, double balance) {
+
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
 
     }
 
-    public int checkBalance() {
+    public double checkBalance() {
 
-        return -1;
-    }
-
-    public void deposit() {
+        return balance;
 
     }
 
-    public void withdraw() {
+    public void deposit(double amount) {
+
+        balance = balance + amount;
+
+    }
+
+    public void withdraw(double amount) {
+
+        balance = balance - amount;
 
     }
 
     public void menu() {
 
     }
-
 
 
 }
