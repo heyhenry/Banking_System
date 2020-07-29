@@ -48,6 +48,7 @@ public class BankSystem {
             System.out.println("B - Deposit");
             System.out.println("C - Withdraw");
             System.out.println("D - Return Menu");
+            System.out.println("X - End transaction");
 
             System.out.println("=============================");
             System.out.println("\nChoose an option provided on the menu: ");
